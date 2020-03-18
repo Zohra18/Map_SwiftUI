@@ -18,3 +18,8 @@ final class Checkpoint: NSObject, MKAnnotation {
         self.coordinate = coordinate
     }
 }
+
+var checkpoints: [Checkpoint] = [
+  Checkpoint(title: "Da Nang", coordinate: .init(latitude: 16.047079, longitude: 108.206230)),
+  Checkpoint(title: "Ha Noi", coordinate: .init(latitude: 21.027763, longitude: 105.834160))
+]

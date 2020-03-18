@@ -15,9 +15,13 @@ struct ContentView: View {
 //    @State private var locations = [MKPointAnnotation]()
     
     @State var checkpoints: [Checkpoint] = [
-      Checkpoint(title: "Da Nang", coordinate: .init(latitude: 16.047079, longitude: 108.206230)),
-      Checkpoint(title: "Ha Noi", coordinate: .init(latitude: 21.027763, longitude: 105.834160))
+      Checkpoint(title: "Musée du Louvre", coordinate: .init(latitude: 48.8611473, longitude: 2.3380277)),
+      Checkpoint(title: "Tour Eiffel", coordinate: .init(latitude: 48.8582602, longitude: 2.2944991)),
+       Checkpoint(title: "Moulin Rouge", coordinate: .init(latitude: 48.8840787, longitude: 2.3324082)),
+       Checkpoint(title: "Place de la Bastille", coordinate: .init(latitude: 48.852987, longitude: 2.3688579)),
+         Checkpoint(title: "Arc de Triomphe", coordinate: .init(latitude: 48.8737791, longitude: 2.2950372))
     ]
+    
     
     var body: some View {
         ZStack {
