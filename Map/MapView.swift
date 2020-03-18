@@ -11,19 +11,31 @@ import MapKit
 
 struct MapView: UIViewRepresentable {
     
+    
     @Binding var centerCoordinate: CLLocationCoordinate2D
+    
+    var locationManager = CLLocationManager()
     var annotations: [MKPointAnnotation]
     
+    func setupManager() {
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
+    }
+    
     func makeUIView(context: Context) -> MKMapView {
+        setupManager()
         let mapView = MKMapView()
-        mapView.delegate = context.coordinator
+        mapView.showsUserLocation = true
+        mapView.userTrackingMode = .follow
+//        mapView.delegate = context.coordinator
         return mapView
     }
     
     func updateUIView(_ uiView: MKMapView, context: Context) {
         if annotations.count != uiView.annotations.count {
-            uiView.removeAnnotation(uiView.annotations)
-            uiView.addAnnotation(annotations)
+//            uiView.removeAnnotation(view.annotations)
+//            uiView.addAnnotation(annotations)
         }
     }
     
