@@ -60,15 +60,13 @@
 		3C52D2B624103ADB00CF87D5 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				3C52D2B724103ADB00CF87D5 /* AppDelegate.swift */,
-				3C52D2B924103ADB00CF87D5 /* SceneDelegate.swift */,
-				3C52D2BB24103ADB00CF87D5 /* ContentView.swift */,
+				3CE7FE382422BC7B00710F3D /* App Lifecycle */,
+				3CE7FE3A2422BCA900710F3D /* View */,
+				3CE7FE392422BCA200710F3D /* Model */,
 				3C52D2BD24103ADC00CF87D5 /* Assets.xcassets */,
 				3C52D2C224103ADC00CF87D5 /* LaunchScreen.storyboard */,
 				3C52D2C524103ADC00CF87D5 /* Info.plist */,
 				3C52D2BF24103ADC00CF87D5 /* Preview Content */,
-				3C52D2CB24103B3900CF87D5 /* MapView.swift */,
-				3CE7FE36242285B100710F3D /* Annotation.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -79,6 +77,32 @@
 				3C52D2C024103ADC00CF87D5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3CE7FE382422BC7B00710F3D /* App Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				3C52D2B924103ADB00CF87D5 /* SceneDelegate.swift */,
+				3C52D2B724103ADB00CF87D5 /* AppDelegate.swift */,
+			);
+			path = "App Lifecycle";
+			sourceTree = "<group>";
+		};
+		3CE7FE392422BCA200710F3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3CE7FE36242285B100710F3D /* Annotation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3CE7FE3A2422BCA900710F3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C52D2BB24103ADB00CF87D5 /* ContentView.swift */,
+				3C52D2CB24103B3900CF87D5 /* MapView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

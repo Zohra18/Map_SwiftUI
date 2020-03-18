@@ -56,5 +56,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This application needs to access your localisation in order to fulfill it&apos;s purpose</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This application needs to access your localisation in order to fulfill it&apos;s purpose</string>
 </dict>
 </plist>
