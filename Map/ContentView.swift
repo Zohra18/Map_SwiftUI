@@ -11,13 +11,21 @@ import MapKit
 
 struct ContentView: View {
     
-    @State private var centerCoordinate = CLLocationCoordinate2D()
-    @State private var locations = [MKPointAnnotation]()
+//    @State private var centerCoordinate = CLLocationCoordinate2D()
+//    @State private var locations = [MKPointAnnotation]()
+    
+    @State var checkpoints: [Checkpoint] = [
+      Checkpoint(title: "Da Nang", coordinate: .init(latitude: 16.047079, longitude: 108.206230)),
+      Checkpoint(title: "Ha Noi", coordinate: .init(latitude: 21.027763, longitude: 105.834160))
+    ]
     
     var body: some View {
         ZStack {
-            MapView(centerCoordinate: $centerCoordinate, annotations: locations)
+//            MapView(centerCoordinate: $centerCoordinate, annotations: locations)
+            MapView(checkpoints: $checkpoints)
                 .edgesIgnoringSafeArea(.all)
+            
+            
 //            Circle()
 //                .fill(Color.blue)
 //                .opacity(0.3)
@@ -32,7 +40,7 @@ struct ContentView: View {
 //                        self.locations.append(newLocation)
 //                    }, label: {
 //                        Image(systemName: "plus")
-//                        
+//
 //                    })
 //                    .padding()
 //                        .background(Color.black.opacity(0.7))
@@ -42,6 +50,8 @@ struct ContentView: View {
 //                        .padding(.trailing)
 //                }
 //            }
+            
+            
         }
     }
 }
