@@ -32,7 +32,7 @@ struct ContentView: View {
             Spacer()
             
             Button(action: {
-                
+                print("")
             }, label: {
                 ZStack {
                     Image(systemName: "location.circle.fill")

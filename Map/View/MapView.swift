@@ -14,6 +14,7 @@ struct MapView: UIViewRepresentable {
     
 //    @Binding var centerCoordinate: CLLocationCoordinate2D
     @Binding var checkpoints: [Checkpoint]
+//    @Binding var 
     
     var locationManager = CLLocationManager()
 //    var annotations: [MKPointAnnotation]
@@ -26,7 +27,10 @@ struct MapView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> MKMapView {
         setupManager()
+        let center = CLLocationCoordinate2D(latitude: 48.862511, longitude: 2.338211)
+        let region = MKCoordinateRegion(center: center, latitudinalMeters: 2000, longitudinalMeters: 2000)
         let mapView = MKMapView()
+        mapView.region = region
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
 //        mapView.delegate = context.coordinator
@@ -74,9 +78,9 @@ struct MapView: UIViewRepresentable {
 
 
 
-//struct MapView_Previews: PreviewProvider {
-//    static var previews: some View {
-////        MapView(centerCoordinate: .constant(MKPointAnnotation.mkPointAnnot.coordinate), annotations: [MKPointAnnotation.mkPointAnnot])
-//        MapView(checkpoints: Checkpoint(title: "Da Nang", coordinate: .init(latitude: 16.047079, longitude: 108.206230)))
-//    }
-//}
+struct MapView_Previews: PreviewProvider {
+    static var previews: some View {
+//        MapView(centerCoordinate: .constant(MKPointAnnotation.mkPointAnnot.coordinate), annotations: [MKPointAnnotation.mkPointAnnot])
+        MapView(checkpoints: .constant(checkpoints))
+    }
+}
