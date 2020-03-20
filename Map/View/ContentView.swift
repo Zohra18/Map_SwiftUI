@@ -27,12 +27,13 @@ struct ContentView: View {
         ZStack {
             //            MapView(centerCoordinate: $centerCoordinate, annotations: locations)
             MapView(checkpoints: $checkpoints)
+//            MapView()
                 .edgesIgnoringSafeArea(.all)
             
             Spacer()
             
             Button(action: {
-                print("")
+                print("ugh")
             }, label: {
                 ZStack {
                     Image(systemName: "location.circle.fill")
